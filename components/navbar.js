@@ -15,6 +15,7 @@ import {
     useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import ThemeToggle from './theme-toggle'
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href
@@ -48,7 +49,7 @@ const Navbar = props => {
             <Container
                 display="flex"
                 p={2}
-                maxW="container.md"
+                maxW="container.lg"
                 wrap="wrap"
                 align="center"
                 justify="space-between"
@@ -74,13 +75,14 @@ const Navbar = props => {
                 </Stack>
 
                 <Box flex={1} align="right">
+                    <ThemeToggle />
                     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
                         <Menu>
                             <MenuButton
                                 as={IconButton}
                                 icon={<HamburgerIcon />}
                                 variant="outline"
-                                aria-aria-label="Options"
+                                aria-label="Options"
                             ></MenuButton>
                             <MenuList>
                                 <MenuItem>
