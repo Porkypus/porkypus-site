@@ -2,7 +2,6 @@
     "name": "porkypus-site",
     "version": "1.0.0",
     "description": "Personal Portfolio Website",
-    "homepage": "https://Porkypus.github.io/porkypus-site",
     "author": {
         "name": "Porkypus",
         "email": "porkypus@gmail.com"
@@ -10,8 +9,6 @@
     "license": "MIT",
     "private": true,
     "scripts": {
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
         "dev": "next dev",
         "build": "next build",
         "start": "next start"
