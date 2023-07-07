@@ -1,28 +1,31 @@
 {
-  "name": "porkypus-site",
-  "version": "1.0.0",
-  "description": "Personal Portfolio Website",
-  "author": {
-    "name": "Porkypus",
-    "email": "porkypus@gmail.com"
-  },
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@chakra-ui/icons": "^2.0.19",
-    "@chakra-ui/react": "^2.7.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "framer-motion": "^10.12.16",
-    "next": "^13.4.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-social-icons": "^5.15.0",
-    "typewriter-effect": "^2.20.1"
-  }
+    "name": "porkypus-site",
+    "version": "1.0.0",
+    "description": "Personal Portfolio Website",
+    "homepage": "https://Porkypus.github.io/porkypus-site",
+    "author": {
+        "name": "Porkypus",
+        "email": "porkypus@gmail.com"
+    },
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@chakra-ui/icons": "^2.0.19",
+        "@chakra-ui/react": "^2.7.0",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "framer-motion": "^10.12.16",
+        "next": "^13.4.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-social-icons": "^5.15.0",
+        "typewriter-effect": "^2.20.1"
+    }
 }
