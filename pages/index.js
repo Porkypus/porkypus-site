@@ -53,7 +53,10 @@ const Page = () => {
                 </Section>
             </Box>
 
-            <Flex direction={{ sm: 'column', md: 'row' }} align="space-between">
+            <Flex
+                direction={{ base: 'column', sm: 'column', md: 'row' }}
+                align="space-between"
+            >
                 <Section delay={0.6} width={500}>
                     <Heading as="h2" variant="section-title">
                         About
