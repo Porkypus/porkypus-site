@@ -18,12 +18,12 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const footPrintImg = '/../public/images/minimalistic_porkypus.png'
+    const logoImg = '/images/minimalistic_porkypus.png'
 
     return (
         <Link href="/">
             <LogoBox>
-                <Image src={footPrintImg} alt="logo" width={40} height={40} />
+                <Image src={logoImg} alt="logo" width={40} height={40} />
                 <Text
                     color={useColorModeValue('gray.800', 'whiteAlpha.900')}
                     fontFamily="Source Sans 3"
