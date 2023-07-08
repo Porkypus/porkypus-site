@@ -57,7 +57,7 @@ const Page = () => {
                 direction={{ base: 'column', sm: 'column', md: 'row' }}
                 align="space-between"
             >
-                <Section delay={0.6} width={500}>
+                <Section delay={0.6} width={500} mb={0}>
                     <Heading as="h2" variant="section-title">
                         About
                     </Heading>

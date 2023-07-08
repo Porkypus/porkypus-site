@@ -7,12 +7,12 @@ const StyledDiv = chakra(motion.div, {
     }
 })
 
-const Section = ({ children, delay = 0, width = '100%' }) => (
+const Section = ({ children, delay = 0, width = '100%', mb = 10 }) => (
     <StyledDiv
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay }}
-        mb={10}
+        mb={mb}
         maxWidth={width}
     >
         {children}
