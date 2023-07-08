@@ -14,6 +14,7 @@ import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import Typewriter from 'typewriter-effect'
+import JobHistory from '../components/job-history'
 
 const Page = () => {
     return (
@@ -41,7 +42,8 @@ const Page = () => {
                             options={{
                                 strings: [
                                     'Graduate Software Developer',
-                                    'Computer Science @ UniOfCambridge'
+                                    'Computer Science @ UniOfCambridge',
+                                    'Fencing and eSports Enjoyer'
                                 ],
                                 autoStart: true,
                                 loop: true,
@@ -72,7 +74,7 @@ const Page = () => {
                 <Spacer />
                 <Box
                     flexShrink={0}
-                    mt={{ base: 4, md: 0 }}
+                    mt={{ base: 3, md: 5 }}
                     ml={{ md: 6 }}
                     align="center"
                 >
@@ -80,7 +82,7 @@ const Page = () => {
                         borderColor="whiteAlpha.800"
                         borderWidth={1}
                         borderStyle="solid"
-                        maxWidth="200px"
+                        maxWidth="180px"
                         display="inline-block"
                         src="images/ronan.jpg"
                         alt="Profile Image"
@@ -88,39 +90,11 @@ const Page = () => {
                 </Box>
             </Flex>
 
-            {/* <Box align="center" my={4}>
-                <NextLink href="/projects">
-                    <Button
-                        rightIcon={<ChevronRightIcon />}
-                        colorScheme="teal"
-                        variant="ghost"
-                    >
-                        My Portfolio
-                    </Button>
-                </NextLink>
-            </Box> */}
-
             <Section delay={1}>
-                <Heading as="h2" variant="section-title">
-                    Timeline
+                <Heading as="h2" variant="section-title" mb={10}>
+                    Work Experience
                 </Heading>
-                <BioSection>
-                    <BioYear>2001</BioYear>
-                    Born in London, UK
-                </BioSection>
-                <BioSection>
-                    <BioYear>2020</BioYear>
-                    Started studying the Computer Science Tripos at the
-                    University of Cambridge
-                </BioSection>
-                <BioSection>
-                    <BioYear>2023</BioYear>
-                    Graduated from the University of Cambridge
-                </BioSection>
-                <BioSection>
-                    <BioYear>2023</BioYear>
-                    Software Developer at GMSL
-                </BioSection>
+                <JobHistory />
             </Section>
 
             <Section delay={1.4}>

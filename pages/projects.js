@@ -8,30 +8,34 @@ import capyThumbnail from '../public/images/projects/capy.png'
 const Projects = () => {
     return (
         <Container maxWidth="container.xl">
-            <Heading as="h2" fontSize={30} mb={4} mt={8}>
-                Projects
-            </Heading>
+            <Section delay={0.4}>
+                <Heading as="h2" fontSize={30} mb={4} mt={8}>
+                    Projects
+                </Heading>
+            </Section>
 
-            <SimpleGrid columns={[1, 1, 2]} gap={6}>
-                <Section>
-                    <ProjectGridItem
-                        id="slr-dtw"
-                        title="Sign Language Recognition"
-                        thumbnail={dtwThumbnail}
-                    >
-                        A project for sign language recognition using DTW.
-                    </ProjectGridItem>
-                </Section>
-                <Section>
-                    <ProjectGridItem
-                        id="capy"
-                        title="Capy'd Away"
-                        thumbnail={capyThumbnail}
-                    >
-                        A game submitted for the Cambridge Game Jam 2023.
-                    </ProjectGridItem>
-                </Section>
-            </SimpleGrid>
+            <Section delay={0.8}>
+                <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                    <Section>
+                        <ProjectGridItem
+                            id="slr-dtw"
+                            title="Sign Language Recognition"
+                            thumbnail={dtwThumbnail}
+                        >
+                            A project for sign language recognition using DTW.
+                        </ProjectGridItem>
+                    </Section>
+                    <Section>
+                        <ProjectGridItem
+                            id="capy"
+                            title="Capy'd Away"
+                            thumbnail={capyThumbnail}
+                        >
+                            A game submitted for the Cambridge Game Jam 2023.
+                        </ProjectGridItem>
+                    </Section>
+                </SimpleGrid>
+            </Section>
         </Container>
     )
 }
