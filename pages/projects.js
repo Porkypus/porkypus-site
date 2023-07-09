@@ -7,7 +7,7 @@ import capyThumbnail from '../public/images/projects/capy.png'
 
 const Projects = () => {
     return (
-        <Container maxWidth="container.xl">
+        <Container maxWidth="container.xl" align="center">
             <Section delay={0.4}>
                 <Heading as="h2" fontSize={30} mb={4} mt={8}>
                     Projects

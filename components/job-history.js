@@ -14,16 +14,16 @@ import {
 
 const jobData = [
     {
-        company: 'Gas Management Services Ltd',
+        company: 'GMSL',
         description: 'Upcoming software developer there.'
     },
     {
-        company: 'PriceWaterhouseCoopers',
+        company: 'PwC',
         description:
             'Worked on the Global Payroll Platform for clients, involving working with .NET (VB.NET and ASP.NET). I also helped develop an employee rewarding website, designed using Reactjs for frontend, C# for the API, and Microsoft SQL Server for the database.'
     },
     {
-        company: 'Huawei Technologies',
+        company: 'Huawei',
         description:
             'Contributed to a whitepaper which outlined a list of specifications and aims of a potential Central Bank Digital Currency for the Bank of Mauritius, including economic impacts and benefits for the population.'
     }
@@ -47,12 +47,13 @@ const JobHistory = () => {
                 alignContent="start"
                 spacing={2}
                 minW={100}
-                mr={6}
+                mr={4}
             >
                 {jobData.map(job => (
                     <Text
                         key={job.company}
                         fontWeight={selectedCompany === job ? 'bold' : 'normal'}
+                        fontSize={15}
                         cursor="pointer"
                         onClick={() => {
                             handleCompanyClick(job)
