@@ -8,11 +8,8 @@ import {
     Spacer
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { Button } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import { BioSection, BioYear } from '../components/bio'
 import Typewriter from 'typewriter-effect'
 import JobHistory from '../components/job-history'
 
@@ -86,6 +83,7 @@ const Page = () => {
                         display="inline-block"
                         src="images/ronan.jpg"
                         alt="Profile Image"
+                        mb={4}
                     />
                 </Box>
             </Flex>
