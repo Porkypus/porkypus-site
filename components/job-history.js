@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Text, VStack, Heading, HStack, SlideFade } from '@chakra-ui/react'
+import { Box, Text, VStack, Heading, HStack } from '@chakra-ui/react'
 
 const jobData = [
     {
