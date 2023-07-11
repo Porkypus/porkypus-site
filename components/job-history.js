@@ -1,5 +1,18 @@
 import { useState } from 'react'
-import { Box, Text, VStack, Heading, HStack } from '@chakra-ui/react'
+import {
+    Box,
+    Text,
+    VStack,
+    Heading,
+    HStack,
+    Tabs,
+    TabList,
+    TabPanels,
+    Tab,
+    TabPanel,
+    TabIndicator,
+    Fade
+} from '@chakra-ui/react'
 
 const jobData = [
     {
@@ -30,7 +43,7 @@ const JobHistory = () => {
 
     return (
         <HStack align="flex-start" justifyContent="flex-start" height={250}>
-            <VStack align="center" justify="inherit" spacing={2} mr={2}>
+            {/* <VStack align="center" justify="inherit" spacing={2} mr={2}>
                 {jobData.map(job => (
                     <Box
                         key={job.company}
@@ -90,7 +103,21 @@ const JobHistory = () => {
                         </Text>
                     </Box>
                 ))}
-            </VStack>
+            </VStack> */}
+
+            <Tabs orientation="vertical" defaultIndex={0}>
+                <TabList>
+                    {jobData.map(job => (
+                        <Tab
+                            onClick={() => {
+                                handleCompanyClick(job)
+                            }}
+                        >
+                            {job.company}
+                        </Tab>
+                    ))}
+                </TabList>
+            </Tabs>
 
             <Box ml={4} maxW={400}>
                 <Heading size="md" mb={4}>
