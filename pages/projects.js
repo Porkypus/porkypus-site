@@ -4,6 +4,9 @@ import Head from 'next/head'
 import { ProjectGridItem } from '../components/grid-item'
 import dtwThumbnail from '../public/images/projects/dtw.png'
 import capyThumbnail from '../public/images/projects/capy.png'
+import porkypusSiteThumbnail from '../public/images/projects/porkypus-site.png'
+import codiesThumbnail from '../public/images/projects/codies.png'
+import hppThumbnail from '../public/images/projects/hpp.png'
 
 const Projects = () => {
     return (
@@ -32,6 +35,34 @@ const Projects = () => {
                             thumbnail={capyThumbnail}
                         >
                             A game submitted for the Cambridge Game Jam 2023.
+                        </ProjectGridItem>
+                    </Section>
+                    <Section>
+                        <ProjectGridItem
+                            id="porkypus-site"
+                            title="porkypus-site"
+                            thumbnail={porkypusSiteThumbnail}
+                        >
+                            Source code for porkypus-site.
+                        </ProjectGridItem>
+                    </Section>
+                    <Section>
+                        <ProjectGridItem
+                            id="codies-bot"
+                            title="CodiesBot"
+                            thumbnail={codiesThumbnail}
+                        >
+                            A Discord bot written to play Codies.
+                        </ProjectGridItem>
+                    </Section>
+                    <Section>
+                        <ProjectGridItem
+                            id="hpp"
+                            title="Household Payment Pools"
+                            thumbnail={hppThumbnail}
+                        >
+                            An app used to add a random elements to payments
+                            within a household.
                         </ProjectGridItem>
                     </Section>
                 </SimpleGrid>

@@ -48,11 +48,12 @@ const Contact = () => {
                     />
                     <SocialIcon
                         url="https://open.spotify.com/user/31w3btukbzx6wy4knzwvmancrlem?si=960b080413d34adf"
-                        fgColor="white"
+                        fgColor="black"
                     />
                     <SocialIcon
                         url="mailto:ronan.rgvd@gmail.com"
-                        fgColor="white"
+                        bgColor="#d9f6f6"
+                        fgColor="black"
                     />
                 </Flex>
             </Section>

@@ -57,7 +57,7 @@ const Page = () => {
                 align="space-between"
             >
                 <Section delay={0.6} width={500} mb={0}>
-                    <Heading as="h2" variant="section-title">
+                    <Heading as="h2" variant="section-title" mb={6}>
                         About
                     </Heading>
                     <Paragraph>
@@ -89,7 +89,7 @@ const Page = () => {
             </Flex>
 
             <Section delay={1}>
-                <Heading as="h2" variant="section-title" mb={10}>
+                <Heading as="h2" variant="section-title" mb={6}>
                     Work Experience
                 </Heading>
                 <JobHistory />
