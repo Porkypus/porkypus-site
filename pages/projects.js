@@ -1,6 +1,6 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Section from '../components/section'
-import Head from 'next/head'
+import Layout from '../components/layouts/article'
 import { ProjectGridItem } from '../components/grid-item'
 import dtwThumbnail from '../public/images/projects/dtw.png'
 import capyThumbnail from '../public/images/projects/capy.png'
@@ -10,64 +10,68 @@ import hppThumbnail from '../public/images/projects/hpp.png'
 
 const Projects = () => {
     return (
-        <Container maxWidth="container.xl" align="center">
-            <Section delay={0.4}>
-                <Heading as="h2" fontSize={30} mb={4} mt={8}>
-                    Projects
-                </Heading>
-            </Section>
+        <Layout title="Projects">
+            <Container maxWidth="container.xl" align="center">
+                <Section>
+                    <Heading as="h2" fontSize={30} mb={4} mt={8}>
+                        Projects
+                    </Heading>
+                </Section>
 
-            <Section delay={0.8}>
-                <SimpleGrid columns={[1, 1, 2]} gap={6}>
-                    <Section>
-                        <ProjectGridItem
-                            id="slr-dtw"
-                            title="Sign Language Recognition"
-                            thumbnail={dtwThumbnail}
-                        >
-                            A project for sign language recognition using DTW.
-                        </ProjectGridItem>
-                    </Section>
-                    <Section>
-                        <ProjectGridItem
-                            id="capy"
-                            title="Capy'd Away"
-                            thumbnail={capyThumbnail}
-                        >
-                            A game submitted for the Cambridge Game Jam 2023.
-                        </ProjectGridItem>
-                    </Section>
-                    <Section>
-                        <ProjectGridItem
-                            id="porkypus-site"
-                            title="porkypus-site"
-                            thumbnail={porkypusSiteThumbnail}
-                        >
-                            Source code for porkypus-site.
-                        </ProjectGridItem>
-                    </Section>
-                    <Section>
-                        <ProjectGridItem
-                            id="codies-bot"
-                            title="CodiesBot"
-                            thumbnail={codiesThumbnail}
-                        >
-                            A Discord bot written to play Codies.
-                        </ProjectGridItem>
-                    </Section>
-                    <Section>
-                        <ProjectGridItem
-                            id="hpp"
-                            title="Household Payment Pools"
-                            thumbnail={hppThumbnail}
-                        >
-                            An app used to add a random elements to payments
-                            within a household.
-                        </ProjectGridItem>
-                    </Section>
-                </SimpleGrid>
-            </Section>
-        </Container>
+                <Section delay={0.4}>
+                    <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                        <Section>
+                            <ProjectGridItem
+                                id="slr-dtw"
+                                title="Sign Language Recognition"
+                                thumbnail={dtwThumbnail}
+                            >
+                                A project for sign language recognition using
+                                DTW.
+                            </ProjectGridItem>
+                        </Section>
+                        <Section>
+                            <ProjectGridItem
+                                id="capy"
+                                title="Capy'd Away"
+                                thumbnail={capyThumbnail}
+                            >
+                                A game submitted for the Cambridge Game Jam
+                                2023.
+                            </ProjectGridItem>
+                        </Section>
+                        <Section>
+                            <ProjectGridItem
+                                id="porkypus-site"
+                                title="porkypus-site"
+                                thumbnail={porkypusSiteThumbnail}
+                            >
+                                Source code for porkypus-site.
+                            </ProjectGridItem>
+                        </Section>
+                        <Section>
+                            <ProjectGridItem
+                                id="codies-bot"
+                                title="CodiesBot"
+                                thumbnail={codiesThumbnail}
+                            >
+                                A Discord bot written to play Codies.
+                            </ProjectGridItem>
+                        </Section>
+                        <Section>
+                            <ProjectGridItem
+                                id="hpp"
+                                title="Household Payment Pools"
+                                thumbnail={hppThumbnail}
+                            >
+                                An app used to add a random elements to payments
+                                within a household.
+                            </ProjectGridItem>
+                        </Section>
+                    </SimpleGrid>
+                </Section>
+            </Container>
+        </Layout>
     )
 }
 

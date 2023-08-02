@@ -11,9 +11,11 @@ const LogoBox = styled.span`
     height: 30px;
     line-height: 20px;
     padding: 10px;
-
+    img {
+        transition: transform 0.4s ease-in-out;
+    }
     &:hover img {
-        transform: rotate(20deg);
+        transform: rotate3d(0, 1, 0, 180deg);
     }
 `
 
@@ -26,7 +28,7 @@ const Logo = () => {
                 <Image src={logoImg} alt="logo" width={40} height={40} />
                 <Text
                     color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                    fontFamily="Source Sans 3"
+                    fontFamily="Roboto Mono"
                     fontWeight="bold"
                     fontSize={25}
                     ml={3}

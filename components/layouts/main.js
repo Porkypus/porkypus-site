@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../navbar'
+import Footer from '../footer'
 import { Box, Container } from '@chakra-ui/react'
 
 const Main = ({ children, router }) => {
@@ -18,6 +19,8 @@ const Main = ({ children, router }) => {
             <Container maxW="container.lg" pt={14} w="100%">
                 {children}
             </Container>
+
+            <Footer />
         </Box>
     )
 }

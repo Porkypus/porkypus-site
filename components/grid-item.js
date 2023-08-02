@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import { Box, Text, LinkBox, LinkOverlay, transition } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ title, href, children, thumbnail }) => (
@@ -22,7 +22,14 @@ export const GridItem = ({ title, href, children, thumbnail }) => (
 )
 
 export const ProjectGridItem = ({ title, id, children, thumbnail }) => (
-    <Box w="100%" textAlign="center">
+    <Box
+        w="100%"
+        textAlign="center"
+        transition="transform 0.2s ease-in-out"
+        _hover={{
+            transform: 'scale(1.05)'
+        }}
+    >
         <LinkBox
             as={NextLink}
             href={`/projects/${id}`}
@@ -48,7 +55,11 @@ export const GridItemStyle = () => (
         styles={`
         .grid-item-thumbnail {
           border-radius: 12px;
+          transition: transform 0.3s;
         }
+        // .grid-item-thumbnail:hover {
+        //     transform: rotate3d(0, 0, 1, 5deg);
+        // }
       `}
     />
 )

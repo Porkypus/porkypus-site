@@ -5,7 +5,6 @@ import {
     Box,
     Link,
     Stack,
-    Heading,
     Flex,
     Menu,
     MenuItem,

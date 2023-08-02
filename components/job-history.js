@@ -2,23 +2,19 @@ import { useState } from 'react'
 import {
     Box,
     Text,
-    VStack,
     Heading,
     HStack,
     Tabs,
     TabList,
-    TabPanels,
-    Tab,
-    TabPanel,
-    TabIndicator,
-    Fade
+    Tab
 } from '@chakra-ui/react'
 
 const jobData = [
     {
         company: 'GMSL',
         role: 'Software Developer',
-        description: 'Upcoming software developer there.',
+        description:
+            'Upcoming software developer here. Planning on working with C# and React as an incoming graduate. More details to come!',
         range: 'September 2023 - Present'
     },
     {
@@ -39,14 +35,19 @@ const jobData = [
 
 const JobHistory = () => {
     const [selectedCompany, setSelectedCompany] = useState(jobData[0])
+    const [isVisible, setIsVisible] = useState(true)
 
     const handleCompanyClick = company => {
-        setSelectedCompany(company)
+        setIsVisible(false)
+        setTimeout(() => {
+            setSelectedCompany(company)
+            setIsVisible(true)
+        }, 500)
     }
 
     return (
         <HStack align="flex-start" justifyContent="flex-start" minH={250}>
-            <Tabs orientation="vertical" defaultIndex={0}>
+            <Tabs orientation="vertical" defaultIndex={0} isLazy="true">
                 <TabList>
                     {jobData.map(job => (
                         <Tab
@@ -66,7 +67,15 @@ const JobHistory = () => {
                 </TabList>
             </Tabs>
 
-            <Box ml={4} maxW={400}>
+            <Box
+                ml={4}
+                maxW={400}
+                style={{
+                    opacity: isVisible ? 1 : 0,
+                    transform: isVisible ? 'translateX(0)' : 'translateY(20px)',
+                    transition: 'all 0.5s ease-in-out'
+                }}
+            >
                 <Heading size="md" mb={2}>
                     {selectedCompany.role} @ {selectedCompany.company}
                 </Heading>
