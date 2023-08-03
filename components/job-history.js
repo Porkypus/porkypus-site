@@ -47,7 +47,7 @@ const JobHistory = () => {
 
     return (
         <HStack align="flex-start" justifyContent="flex-start" minH={250}>
-            <Tabs orientation="vertical" defaultIndex={0} isLazy="true">
+            <Tabs orientation="vertical" defaultIndex={0}>
                 <TabList>
                     {jobData.map(job => (
                         <Tab

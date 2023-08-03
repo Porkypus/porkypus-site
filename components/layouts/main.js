@@ -1,7 +1,14 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import Navbar from '../navbar'
 import Footer from '../footer'
+import CapybarasLoader from '../capybaras-loader'
 import { Box, Container } from '@chakra-ui/react'
+
+const LazyCapybaras = dynamic(() => import('../capybaras'), {
+    ssr: false,
+    loading: () => <CapybarasLoader />
+})
 
 const Main = ({ children, router }) => {
     return (
@@ -17,6 +24,7 @@ const Main = ({ children, router }) => {
             <Navbar path={router.asPath} />
 
             <Container maxW="container.lg" pt={14} w="100%">
+                <LazyCapybaras />
                 {children}
             </Container>
 
