@@ -12,8 +12,8 @@ const Projects = () => {
     return (
         <Layout title="Projects">
             <Container maxWidth="container.xl" align="center">
-                <Section>
-                    <Heading as="h2" fontSize={30} mb={4} mt={8}>
+                <Section bgImage="">
+                    <Heading as="h2" fontSize={30} mb={4} mt={4}>
                         Projects
                     </Heading>
                 </Section>
@@ -45,6 +45,7 @@ const Projects = () => {
                                 id="porkypus-site"
                                 title="porkypus-site"
                                 thumbnail={porkypusSiteThumbnail}
+                                href="https://github.com/Porkypus/porkypus-site"
                             >
                                 Source code for porkypus-site.
                             </ProjectGridItem>
@@ -54,6 +55,7 @@ const Projects = () => {
                                 id="codies-bot"
                                 title="CodiesBot"
                                 thumbnail={codiesThumbnail}
+                                href="https://github.com/Porkypus/CodiesBot"
                             >
                                 A Discord bot written to play Codies.
                             </ProjectGridItem>
@@ -63,6 +65,7 @@ const Projects = () => {
                                 id="hpp"
                                 title="Household Payment Pools"
                                 thumbnail={hppThumbnail}
+                                href="https://github.com/Porkypus/household_payment_pools"
                             >
                                 An app used to add a random elements to payments
                                 within a household.

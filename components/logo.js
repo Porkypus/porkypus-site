@@ -25,10 +25,16 @@ const Logo = () => {
     return (
         <Link href="/">
             <LogoBox>
-                <Image src={logoImg} alt="logo" width={40} height={40} />
+                <Image
+                    src={logoImg}
+                    alt="logo"
+                    width={40}
+                    height={40}
+                    style={{ width: '100%', height: 'auto' }}
+                />
                 <Text
                     color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                    fontFamily="Roboto Mono"
+                    fontFamily="Ubuntu"
                     fontWeight="bold"
                     fontSize={25}
                     ml={3}

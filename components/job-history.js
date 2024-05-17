@@ -6,7 +6,8 @@ import {
     HStack,
     Tabs,
     TabList,
-    Tab
+    Tab,
+    useColorModeValue
 } from '@chakra-ui/react'
 
 const jobData = [
@@ -14,7 +15,7 @@ const jobData = [
         company: 'GMSL',
         role: 'Software Developer',
         description:
-            'Upcoming software developer here. Planning on working with C# and React as an incoming graduate. More details to come!',
+            'I currently work as a full-stack software developer here. I use C# to write the code for the backend of the product, which is hosted on AWS for a portfolio of clients working in the gas trading industry. This requires our code to be efficient, making use of parallel calls to asynchronous API methods which are provided by our other internal teams, and we also follow extensive test-driven development, which catches most bugs even before our extensive testing pipeline.',
         range: 'September 2023 - Present'
     },
     {
@@ -46,7 +47,7 @@ const JobHistory = () => {
     }
 
     return (
-        <HStack align="flex-start" justifyContent="flex-start" minH={250}>
+        <HStack align="flex-start" justifyContent="flex-start" minH={300}>
             <Tabs orientation="vertical" defaultIndex={0}>
                 <TabList>
                     {jobData.map(job => (
@@ -69,7 +70,7 @@ const JobHistory = () => {
 
             <Box
                 ml={4}
-                maxW={400}
+                width="100%"
                 style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? 'translateX(0)' : 'translateY(20px)',
@@ -79,7 +80,11 @@ const JobHistory = () => {
                 <Heading size="md" mb={2}>
                     {selectedCompany.role} @ {selectedCompany.company}
                 </Heading>
-                <Text fontSize={14} color="glassTeal" mb={4}>
+                <Text
+                    fontSize={14}
+                    color={useColorModeValue('black', 'glassTeal')}
+                    mb={4}
+                >
                     {selectedCompany.range}
                 </Text>
                 <Text>{selectedCompany.description}</Text>
