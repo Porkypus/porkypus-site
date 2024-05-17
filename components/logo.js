@@ -34,7 +34,7 @@ const Logo = () => {
                 />
                 <Text
                     color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                    fontFamily="Ubuntu"
+                    fontFamily="Ubuntu Mono"
                     fontWeight="bold"
                     fontSize={25}
                     ml={3}
