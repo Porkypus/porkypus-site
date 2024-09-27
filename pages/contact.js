@@ -30,13 +30,13 @@ const Contact = () => {
     return (
         <Layout title="Contact">
             <Container maxWidth="container.xl" align="center" justify="center">
-                <Section>
+                <Section isWindow={false}>
                     <Heading as="h2" fontSize={30} mb={4} mt={8}>
                         Contact Details
                     </Heading>
                 </Section>
 
-                <Section delay={0.4}>
+                <Section delay={0.4} isWindow={false}>
                     <Text maxW="600" mb={10}>
                         If you want to contact me for any queries, whether they
                         concern job opportunities, questions about my projects,
@@ -45,7 +45,7 @@ const Contact = () => {
                     </Text>
                 </Section>
 
-                <Section delay={0.8}>
+                <Section delay={0.8} isWindow={false}>
                     <Flex
                         direction={{ md: 'row' }}
                         display="flex"
@@ -63,34 +63,6 @@ const Contact = () => {
                                 <SocialIcon url={url} fgColor={color} />
                             </motion.div>
                         ))}
-                        {/* <motion.div
-                            whileHover={{
-                                rotateY: 180
-                            }}
-                            transition={{ ease: 'easeOut', duration: 0.25 }}
-                        >
-                            <SocialIcon
-                                url="https://github.com/Porkypus"
-                                fgColor="white"
-                            />
-                        </motion.div>
-                        <SocialIcon
-                            url="https://www.linkedin.com/in/ronanrgvd/"
-                            fgColor="white"
-                        />
-                        <SocialIcon
-                            url="https://discordapp.com/users/379704258771288064"
-                            fgColor="white"
-                        />
-                        <SocialIcon
-                            url="https://open.spotify.com/user/31w3btukbzx6wy4knzwvmancrlem?si=960b080413d34adf"
-                            fgColor="black"
-                        />
-                        <SocialIcon
-                            url="mailto:ronan.rgvd@gmail.com"
-                            bgColor="#d9f6f6"
-                            fgColor="black"
-                        /> */}
                     </Flex>
                 </Section>
             </Container>

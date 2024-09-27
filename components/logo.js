@@ -23,7 +23,7 @@ const Logo = () => {
     const logoImg = '/images/minimalistic_porkypus.png'
 
     return (
-        <Link href="/">
+        <Link href="/" scroll={false}>
             <LogoBox>
                 <Image
                     src={logoImg}

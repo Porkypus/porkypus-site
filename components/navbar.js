@@ -26,6 +26,7 @@ const LinkItem = ({ href, path, children }) => {
             p={2}
             bg={active ? 'glassTeal' : undefined}
             color={active ? 'dark' : inactiveColor}
+            scroll={false}
         >
             {children}
         </Link>
