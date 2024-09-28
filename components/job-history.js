@@ -3,26 +3,23 @@ import {
     Box,
     Text,
     Heading,
-    HStack,
     Tabs,
     TabList,
     Tab,
     useColorModeValue,
     Flex,
+    UnorderedList,
+    ListItem,
     useBreakpointValue
 } from '@chakra-ui/react'
 import { jobData } from '../data/job-data'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const JobHistory = () => {
     const [selectedCompany, setSelectedCompany] = useState(jobData[0])
-    const [isVisible, setIsVisible] = useState(true)
 
     const handleCompanyClick = company => {
-        setIsVisible(false)
-        setTimeout(() => {
-            setSelectedCompany(company)
-            setIsVisible(true)
-        }, 500)
+        setSelectedCompany(company)
     }
 
     const tabsOrientation = useBreakpointValue({
@@ -35,16 +32,12 @@ const JobHistory = () => {
             align="flex-start"
             justifyContent="flex-start"
             direction={{ base: 'column', md: 'row' }}
-            h={{
-                base: '40vh', // Default height for mobile
-                md: '30vh', // Height for medium screens and up
-                lg: '25vh' // Height for large screens and up
-            }}
         >
             <Tabs
                 orientation={tabsOrientation}
                 defaultIndex={0}
                 borderColor={useColorModeValue('black', 'glassTeal')}
+                mb={6}
             >
                 <TabList>
                     {jobData.map(job => (
@@ -72,28 +65,33 @@ const JobHistory = () => {
                 </TabList>
             </Tabs>
 
-            <Box
-                m={4}
-                width="100%"
-                style={{
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? 'translateX(0)' : 'translateY(20px)',
-                    transition: 'all 0.5s ease-in-out'
-                }}
-                overflow="auto"
-            >
-                <Heading size="md" mb={2}>
-                    {selectedCompany.role} @ {selectedCompany.company}
-                </Heading>
-                <Text
-                    fontSize={14}
-                    color={useColorModeValue('black', 'glassTeal')}
-                    mb={4}
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={selectedCompany.company}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
                 >
-                    {selectedCompany.range}
-                </Text>
-                <Text>{selectedCompany.description}</Text>
-            </Box>
+                    <Box width="100%" h="100%" overflow="auto" p={2} ml={2}>
+                        <Heading size="md" mb={2}>
+                            {selectedCompany.role} @ {selectedCompany.company}
+                        </Heading>
+                        <Text
+                            fontSize={14}
+                            color={useColorModeValue('black', 'glassTeal')}
+                            mb={4}
+                        >
+                            {selectedCompany.range}
+                        </Text>
+                        <UnorderedList>
+                            {selectedCompany.description.map(description => (
+                                <ListItem>{description}</ListItem>
+                            ))}
+                        </UnorderedList>
+                    </Box>
+                </motion.div>
+            </AnimatePresence>
         </Flex>
     )
 }

@@ -23,7 +23,7 @@ const Capy = () => {
                 </Box>
 
                 <Box align="center">
-                    <Section delay={0.2} mb={4}>
+                    <Section delay={0.2} mb={4} isWindow={false}>
                         <Text maxW="600" mb={10}>
                             This game was submitted for the{' '}
                             <Link href="https://itch.io/jam/camgamejam">

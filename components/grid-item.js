@@ -8,7 +8,6 @@ import {
     Flex,
     useColorModeValue
 } from '@chakra-ui/react'
-import { Global } from '@emotion/react'
 
 export const GridItem = ({ title, href, children, thumbnail }) => (
     <Box w="100%" align="center">
@@ -16,7 +15,7 @@ export const GridItem = ({ title, href, children, thumbnail }) => (
             <Image
                 src={thumbnail}
                 alt={title}
-                className="grid-item-thumbnail"
+                className="transition-transform duration-300 rounded-br-xl rounded-bl-xl"
                 placeholder="blur"
                 loading="lazy"
             />
@@ -50,7 +49,7 @@ export const ProjectGridItem = ({ title, id, children, thumbnail, href }) => {
                     p={2}
                     alignItems="center"
                     bg={titleBarBg}
-                    className="title-bar"
+                    className="transition-transform duration-300 rounded-t-xl"
                 >
                     <Flex mr={4}>
                         {['#FF5F56', '#FFBD2E', '#27C93F'].map(
@@ -73,32 +72,13 @@ export const ProjectGridItem = ({ title, id, children, thumbnail, href }) => {
                 <Image
                     src={thumbnail}
                     alt={title}
-                    className="grid-item-thumbnail"
+                    className="transition-transform duration-300 rounded-br-xl rounded-bl-xl"
                     placeholder="blur"
                 />
-                <LinkOverlay as="div" fontSize={22} href={`/projects/${id}`}>
-                    <Text mt={2}>{title}</Text>
-                </LinkOverlay>
-                <Text fontSize={14}>{children}</Text>
+                <Text pt={4} fontSize={14}>
+                    {children}
+                </Text>
             </LinkBox>
         </Box>
     )
 }
-
-export const GridItemStyle = () => (
-    <Global
-        styles={`
-        .grid-item-thumbnail {
-         border-bottom-left-radius: 12px;
-         border-bottom-right-radius: 12px;
-         transition: transform 0.3s;
-        }
-
-        .title-bar {
-         border-top-left-radius: 12px;
-         border-top-right-radius: 12px;
-         transition: transform 0.3s;
-        }
-      `}
-    />
-)

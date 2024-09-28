@@ -42,7 +42,10 @@ const Page = () => {
                     </Section>
                 </Box>
 
-                <Flex direction={{ base: 'column', sm: 'column', md: 'row' }}>
+                <Flex
+                    direction={{ base: 'column', sm: 'column', md: 'row' }}
+                    mb={12}
+                >
                     <Box flexShrink={0} align="center" justifyContent="center">
                         <Image
                             borderRadius={20}
@@ -52,8 +55,9 @@ const Page = () => {
                             display="inline-block"
                             src="images/ronan.jpg"
                             alt="Profile Image"
-                            m={10}
-                            mb={20}
+                            mt={8}
+                            mr={20}
+                            mb={8}
                             transition="transform 0.2s ease-in-out"
                             _hover={{
                                 transform: 'scale(1.05)'
@@ -63,15 +67,22 @@ const Page = () => {
                     <Spacer />
                     <Section delay={0.6} bgColor={bgColor} title="About">
                         <Paragraph>
-                            Hi! I am a quant developer, recently graduating with
-                            a BA in Computer Science from the University of
-                            Cambridge. I currently work at Dare, a tech company
-                            which generates liquidity for commodities.
+                            Hi! I'm Ronan, an incoming quant developer, a
+                            relatively recent graduate in Computer Science from
+                            the University of Cambridge. I will be working at
+                            Dare, a tech/trading company which generates
+                            liquidity for commodities.
+                        </Paragraph>
+
+                        <Paragraph>
+                            In my free time, I like playing video games, cooking
+                            and tasting dishes,trying out different cuisines,
+                            and I also do olympic fencing, which is nowadays.
                         </Paragraph>
                     </Section>
                 </Flex>
 
-                <Box>
+                <Box mb={12}>
                     <Section
                         delay={1}
                         bgColor={bgColor}
@@ -81,16 +92,18 @@ const Page = () => {
                     </Section>
                 </Box>
 
-                <Box>
+                <Box mb={12}>
                     <Section delay={1.4} bgColor={bgColor} title="Interests">
-                        I like problems that are algorithmic in nature.
-                        Recently, I took a liking to algorithmic trading, due to
-                        the high use of statistics, probability, and information
-                        theory in the field. This naturally leads to some
-                        interest in machine learning as well, which is used in
-                        some related industries.I also worked a bit with
-                        blockchain technologies (Solidity) and found that quite
-                        cool.
+                        <Paragraph>
+                            I like problems that are algorithmic in nature.
+                            Recently, I took a liking to algorithmic trading,
+                            due to the high use of statistics, probability, and
+                            information theory in the field. This naturally
+                            leads to some interest in machine learning as well,
+                            which is used in some related industries.I also
+                            worked a bit with blockchain technologies (Solidity)
+                            and found that quite cool.
+                        </Paragraph>
                     </Section>
                 </Box>
             </Container>

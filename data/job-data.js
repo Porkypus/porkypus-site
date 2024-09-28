@@ -1,23 +1,39 @@
 export const jobData = [
     {
+        company: 'Dare',
+        role: 'Quant Developer',
+        description: [
+            'Incoming Quantitative Developer (Trading Software Engineer, Quantitative Analyst, whatever you want to call it) at Dare, starting in November 2024.',
+            'More info to be added soon!'
+        ],
+        range: 'November 2024 - Present'
+    },
+    {
         company: 'GMSL',
         role: 'Software Developer',
-        description:
-            'I currently work as a full-stack software developer here. I use C# to write the code for the backend of the product, which is hosted on AWS for a portfolio of clients working in the gas trading industry. This requires our code to be efficient, making use of parallel calls to asynchronous API methods which are provided by our other internal teams, and we also follow extensive test-driven development, which catches most bugs even before our extensive testing pipeline.',
-        range: 'September 2023 - Present'
+        description: [
+            'Written back-end code for gas nominations and trades, developing new features such as support for storage contracts and gas interconnectors. Following test-driven development and microservices architecture practices.',
+            'Created new components and pages for Chorus, main UI for dealing with gas trades and nominations. Also helping develop the in-house component library.',
+            'Implemented first automated accessibility checker for the front-end to file warnings when proper accessibility concerns on the Chorus website are present.'
+        ],
+        range: 'September 2023 - November 2024'
     },
     {
         company: 'PwC',
         role: 'Technology Intern',
-        description:
-            'Worked on the Global Payroll Platform for clients, involving working with .NET (VB.NET and ASP.NET). I also helped develop an employee rewarding website, designed using Reactjs for frontend, C# for the API, and Microsoft SQL Server for the database.',
+        description: [
+            'Maintained and improved features for the Global Payroll Platform, including tax reports processing and developed a form for tax documents upload.',
+            "Developed an internal employee reward website and created required databases and schemas to store the website's data."
+        ],
         range: 'August 2022 - September 2022'
     },
     {
         company: 'Huawei',
         role: 'Intern',
-        description:
-            'Contributed to a whitepaper which outlined a list of specifications and aims of a potential Central Bank Digital Currency for the Bank of Mauritius, including economic impacts and benefits for the population.',
+        description: [
+            'Contributed to a whitepaper on a potential Central Bank Digital Currency for the Bank of Mauritius.',
+            'Produced high-level solutions for the implementation of a pilot stage digital token.'
+        ],
         range: 'July 2021 - September 2021'
     }
 ]

@@ -1,18 +1,26 @@
-import { Box, Container, Image, Link, Text } from '@chakra-ui/react'
+import {
+    Box,
+    Container,
+    Image,
+    Text,
+    useColorModeValue
+} from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
 import Section from '../../components/section'
 
 const SignLanguageRecognition = () => {
     const image = '/images/projects/dtw.png'
+    const bgColor = useColorModeValue('#ececec6A', '#2d3132DA')
+
     return (
         <Layout title="Sign Language Recognition">
             <Container w="100%" maxW="container.lg">
                 <Box align="center" p={10}>
                     <Image
                         src={image}
-                        alt={"Capy'd Away"}
+                        alt={'SLR DTW'}
                         height="auto"
-                        width="40rem"
+                        width="70%"
                         placeholder="blur"
                         borderRadius={20}
                         transition="transform 0.2s ease-in-out"
@@ -23,8 +31,14 @@ const SignLanguageRecognition = () => {
                 </Box>
 
                 <Box align="center">
-                    <Section delay={0.2} mb={4}>
-                        <Text maxW="600" mb={10}>
+                    <Section
+                        delay={0.2}
+                        mb={4}
+                        // bgColor={bgColor}
+                        width="70%"
+                        isWindow={false}
+                    >
+                        <Text mb={10}>
                             This was the project that I did for my undergraduate
                             dissertation at the University of Cambridge for Part
                             II of the Computer Science Tripos. I was already
@@ -36,7 +50,7 @@ const SignLanguageRecognition = () => {
                             to obtain quite accurate scores when it came to
                             recognising testing data.
                         </Text>
-                        <Text maxW="600" mb={10}>
+                        <Text>
                             {' '}
                             I would still want to build up on any alternative
                             use cases for DTW. One that I would love to try is

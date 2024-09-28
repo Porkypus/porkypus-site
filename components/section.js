@@ -15,9 +15,10 @@ const StyledDiv = chakra(motion.div, {
 
 const Section = ({
     children,
+    height = 'auto',
     width = '100%',
     title = '',
-    mb = 12,
+    mb = 0,
     delay = 0,
     bgColor = '',
     isWindow = true
@@ -34,7 +35,8 @@ const Section = ({
             overflow="hidden"
             borderRadius={12}
             boxShadow={isWindow ? 'lg' : 'none'}
-            height="auto"
+            height={height}
+            bgColor={bgColor}
         >
             {isWindow && (
                 <Flex bg={titleBarBg} p={2} alignItems="center">
@@ -57,7 +59,8 @@ const Section = ({
                     </Box>
                 </Flex>
             )}
-            <Box p={5} bgColor={bgColor} h="100%">
+
+            <Box p={5} mb={5} h="100%">
                 {children}
             </Box>
         </StyledDiv>
