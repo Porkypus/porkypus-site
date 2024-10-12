@@ -31,6 +31,7 @@ const Logo = () => {
                     width={40}
                     height={40}
                     style={{ width: '100%', height: 'auto' }}
+                    priority={true}
                 />
                 <Text
                     color={useColorModeValue('gray.800', 'whiteAlpha.900')}

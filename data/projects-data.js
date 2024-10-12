@@ -3,6 +3,7 @@ import capyThumbnail from '/public/images/projects/capy.png'
 import porkypusSiteThumbnail from '/public/images/projects/porkypus-site.png'
 import codiesThumbnail from '/public/images/projects/codies.png'
 import hppThumbnail from '/public/images/projects/hpp.png'
+import imcProsperity2 from '/public/images/projects/imc-prosperity-2.png'
 
 export const projectsData = [
     {
@@ -16,6 +17,12 @@ export const projectsData = [
         title: "Capy'd Away",
         thumbnail: capyThumbnail,
         description: 'A game submitted for the Cambridge Game Jam 2023.'
+    },
+    {
+        id: 'imc-prosperity-2-2024',
+        title: 'IMC Prosperity 2',
+        thumbnail: imcProsperity2,
+        description: 'My first experience with IMC Prosperity.'
     },
     {
         id: 'porkypus-site',

@@ -27,8 +27,8 @@ const Main = ({ children, router }) => {
                 <Container maxW="container.lg" pt={14} w="100%">
                     <LazyCapybaras />
                     {children}
-                    <Footer />
                 </Container>
+                <Footer />
             </Box>
         </>
     )

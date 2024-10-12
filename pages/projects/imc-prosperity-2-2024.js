@@ -5,10 +5,10 @@ import NextLink from 'next/link'
 import { ArrowBackIcon } from '@chakra-ui/icons'
 
 const SignLanguageRecognition = () => {
-    const image = '/images/projects/dtw.png'
+    const image = '/images/projects/imc-prosperity-2.png'
 
     return (
-        <Layout title="Sign Language Recognition">
+        <Layout title="IMC Prosperity 2">
             <Container w="100%" maxW="container.lg">
                 <Box>
                     <Box align="left">
@@ -25,7 +25,7 @@ const SignLanguageRecognition = () => {
                 <Box align="center" p={10}>
                     <Image
                         src={image}
-                        alt={'SLR DTW'}
+                        alt={'IMC'}
                         height="auto"
                         width={['100%', '100%', '70%']}
                         placeholder="blur"
@@ -45,23 +45,22 @@ const SignLanguageRecognition = () => {
                         isWindow={false}
                     >
                         <Text mb={10}>
-                            This was the project that I did for my undergraduate
-                            dissertation at the University of Cambridge for Part
-                            II of the Computer Science Tripos. I was already
-                            doing a lot of dynamic programming as part of my
-                            coursework and subjects. This inspired me to use
-                            this method as a way of recognising sign language
-                            gestures. Using tools such as mediapipe to provide
-                            features that I could use to compare data, I managed
-                            to obtain quite accurate scores when it came to
-                            recognising testing data.
-                        </Text>
-                        <Text>
-                            {' '}
-                            I would still want to build up on any alternative
-                            use cases for DTW. One that I would love to try is
-                            in recognising graph patterns and if it possible to
-                            use that to determine stock prices.
+                            I participated as a solo player in the IMC
+                            Prosperity 2 algorithmic trading competition, where
+                            I developed and implemented trading strategies for
+                            various simulated market scenarios. I mostly did
+                            this for fun, as I wanted to learn more about the
+                            algorithmic trading industry in general. The
+                            competition involved analyzing market data,
+                            identifying patterns, and making manual trading
+                            decisions to maximize profits. The API provided was
+                            provided in Python, which I used to develop my
+                            algorithms. Although I didn't win the competition,
+                            the experience was invaluable. It provided hands-on
+                            experience with algorithmic trading concepts,
+                            improved my skills in data analysis and strategy
+                            development, and gave me insights into the
+                            complexities of financial markets.
                         </Text>
                     </Section>
                 </Box>

@@ -85,9 +85,13 @@ const JobHistory = () => {
                             {selectedCompany.range}
                         </Text>
                         <UnorderedList>
-                            {selectedCompany.description.map(description => (
-                                <ListItem>{description}</ListItem>
-                            ))}
+                            {selectedCompany.description.map(
+                                (description, index) => (
+                                    <ListItem key={index}>
+                                        {description}
+                                    </ListItem>
+                                )
+                            )}
                         </UnorderedList>
                     </Box>
                 </motion.div>

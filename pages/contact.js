@@ -29,7 +29,7 @@ const urlList = [
 const Contact = () => {
     return (
         <Layout title="Contact">
-            <Container maxWidth="container.xl" align="center" justify="center">
+            <Container align="center" justify="center">
                 <Section isWindow={false}>
                     <Heading as="h2" fontSize={30} mb={4} mt={8}>
                         Contact Details
@@ -37,7 +37,7 @@ const Contact = () => {
                 </Section>
 
                 <Section delay={0.4} isWindow={false}>
-                    <Text maxW="600" mb={10}>
+                    <Text mb={10}>
                         If you want to contact me for any queries, whether they
                         concern job opportunities, questions about my projects,
                         or simply for a quick chat, feel free to use any of the
@@ -53,8 +53,9 @@ const Contact = () => {
                         justify="center"
                         gap={6}
                     >
-                        {urlList.map(({ url, color }) => (
+                        {urlList.map(({ url, color }, index) => (
                             <motion.div
+                                key={index}
                                 whileHover={{
                                     scale: 1.2
                                 }}

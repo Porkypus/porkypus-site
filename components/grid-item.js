@@ -51,7 +51,7 @@ export const ProjectGridItem = ({ title, id, children, thumbnail, href }) => {
                     bg={titleBarBg}
                     className="transition-transform duration-300 rounded-t-xl"
                 >
-                    <Flex mr={4}>
+                    <Flex mr={4} flexShrink={0}>
                         {['#FF5F56', '#FFBD2E', '#27C93F'].map(
                             (color, index) => (
                                 <Box
@@ -65,7 +65,15 @@ export const ProjectGridItem = ({ title, id, children, thumbnail, href }) => {
                             )
                         )}
                     </Flex>
-                    <Box fontWeight="bold" fontSize="sm">
+                    <Box
+                        fontWeight="bold"
+                        fontSize="sm"
+                        whiteSpace="nowrap"
+                        overflow="hidden"
+                        textOverflow="ellipsis"
+                        width="100%"
+                        textAlign="left"
+                    >
                         {title}
                     </Box>
                 </Flex>

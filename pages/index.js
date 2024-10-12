@@ -76,8 +76,9 @@ const Page = () => {
 
                         <Paragraph>
                             In my free time, I like playing video games, cooking
-                            and tasting dishes,trying out different cuisines,
-                            and I also do olympic fencing, which is nowadays.
+                            and tasting dishes, trying out different cuisines,
+                            and I also do olympic fencing, which I do less
+                            nowadays.
                         </Paragraph>
                     </Section>
                 </Flex>
