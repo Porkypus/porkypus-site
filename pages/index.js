@@ -28,8 +28,8 @@ const Page = () => {
                             <Typewriter
                                 options={{
                                     strings: [
-                                        'Quantitative Developer',
-                                        'Trading Software Engineer',
+                                        'Quant Analyst/Dev',
+                                        'Software Engineer',
                                         'Computer Science @ UniOfCambridge'
                                     ],
                                     autoStart: true,
@@ -70,8 +70,8 @@ const Page = () => {
                             Hi! I'm Ronan, an incoming quant developer, a
                             relatively recent graduate in Computer Science from
                             the University of Cambridge. I will be working at
-                            Dare, a tech/trading company which generates
-                            liquidity for commodities.
+                            Squarepoint Capital, a hedge fund which focuses on
+                            quantitative methods for trading.
                         </Paragraph>
 
                         <Paragraph>

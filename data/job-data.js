@@ -1,12 +1,12 @@
 export const jobData = [
     {
-        company: 'Dare',
-        role: 'Quant Developer',
+        company: 'Squarepoint',
+        role: 'Quantitative Analyst',
         description: [
-            'Incoming Quantitative Developer (Trading Software Engineer, Quantitative Analyst, whatever you want to call it) at Dare, starting in November 2024.',
+            'Incoming Quant at Squarepoint Capital, starting in Jan 2025.',
             'More info to be added soon!'
         ],
-        range: 'November 2024 - Present'
+        range: 'Jan 2025 - Present'
     },
     {
         company: 'GMSL',
